@@ -2,15 +2,12 @@
 
 clear
 
-# Initialize the user's score at zero
 SCORE=0
 
 #!/bin/bash
 
-# Clear the screen for a clean game start
 clear
 
-# Initialize the user's score at zero
 SCORE=0
 
 echo "================================================="
@@ -24,7 +21,6 @@ echo ""
 echo "Question 1: What is The Weeknd's real legal name?"
 read -p "Your Answer: " reply1
 
-# Converting user input to lowercase to prevent typos from breaking it
 if [ "${reply1,,}" == "abel tesfaye" ] || [ "${reply1,,}" == "abel" ]; then
     echo "✅ Correct! +1 point."
     ((SCORE++))
@@ -57,14 +53,12 @@ else
 fi
 echo "-------------------------------------------------"
 
-# --- GAME OVER SCOREBOARD ---
 clear
 echo "================================================="
 echo "                GAME OVER 🎮                     "
 echo "================================================="
 echo "Your Final Score: $SCORE / 3"
 
-# Performance evaluation based on final score
 if [ $SCORE -eq 3 ]; then
     echo "Vibe Level: True XO Legend! 🔥"
 elif [ $SCORE -eq 2 ]; then
